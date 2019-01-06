@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Coursesales from './Courcesales';
 
 class App extends Component {
   render() {
+    var courses = [
+      { name: 'Complete ioS10 dev course', price: 100 },
+      { name: 'Complete ioS10 dev course', price: 200 },
+      { name: 'Complete ioS10 dev course', price: 300 },
+      { name: 'Complete ioS10 dev course', price: 400 },
+    ];
     return (
       <div className="App">
         <header className="App-header">
@@ -11,15 +18,9 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h2>Welcome to Coursepurchase Page</h2>
         </header>
+        <Coursesales items={courses} />
       </div>
     );
   }
